@@ -8,11 +8,11 @@ class APIHelper {
 
   Future<WeatherModel?> fetchweather({required String locationame}) async {
     String baseurl =
-        "http://api.weatherapi.com/v1/forecast.json?key=6c61fa921eda498d90e53228232208&q=$locationame&aqi=no";
+        "http://api.weatherapi.com/v1/forecast.json?key=2de13e7bf3864a5587e54413232508&q=$locationame&aqi=no";
 
     http.Response res = await http.get(Uri.parse(baseurl));
 
-    if (res.statusCode == 200) {
+    if (res.statusCode == 404) {
       String data = res.body;
       Map<String, dynamic> decoddata = jsonDecode(data);
       WeatherModel weatherdata = WeatherModel.frommap(data: decoddata);

@@ -25,11 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
           width: 400,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
             image: DecorationImage(
                 image: NetworkImage(
-                    "https://media.tenor.com/GtDkRSPU9CgAAAAC/cloud-weather.gif"),
-                fit: BoxFit.fill),
+                    "https://i.pinimg.com/originals/74/92/7c/74927cce08c1cbdcb409759b1453b2f0.gif"),
+                fit: BoxFit.cover),
           ),
         ),
       ),
