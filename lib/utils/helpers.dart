@@ -12,7 +12,7 @@ class APIHelper {
 
     http.Response res = await http.get(Uri.parse(baseurl));
 
-    if (res.statusCode == 404) {
+    if (res.statusCode == 200) {
       String data = res.body;
       Map<String, dynamic> decoddata = jsonDecode(data);
       WeatherModel weatherdata = WeatherModel.frommap(data: decoddata);
